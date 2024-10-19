@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Colores para la salida
+YELLOW='\033[0;33m' # advertencia
 PURPLE='\033[0;35m' # intervención del usuario
 GREEN='\033[0;32m' # correcto
 RED='\033[0;31m' # error
@@ -188,7 +189,7 @@ case $1 in
         stop_docker
         ;;
     *)
-        echo -e "${RED}Uso: $0 {docker|stop}${NC}"
+        echo -e "${YELLOW}metodo de uso:${NC}${RED}sudo $0 {docker|stop}${NC}"
         exit 1
         ;;
 esac
